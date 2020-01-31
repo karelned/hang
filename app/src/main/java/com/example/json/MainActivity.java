@@ -40,45 +40,7 @@ public class MainActivity extends AppCompatActivity {
 
         mRequestQueue.start();
     }
-
-/*
-    public void btnTranslate_Clicked(View view) {
-        // string with user input
-        String userInput = mEditText.getText().toString();
-
-        Log.v("MYAPP",userInput);
-
-        String url = "https://api.mymemory.translated.net/get?q="+userInput+"&langpair=en|it";
-
-        JsonObjectRequest jsonObjectRequest = new JsonObjectRequest
-                (Request.Method.GET, url, null, new Response.Listener<JSONObject>() {
-
-                    @Override
-                    public void onResponse(JSONObject response) {
-                        //mTextView.setText("Response: " + response.toString());
-                        try {
-                            JSONObject responseData = response.getJSONObject("responseData");
-                            String translatedText = responseData.getString("translatedText");
-
-                            mTextView.setText(translatedText);
-
-                        } catch (JSONException e) {
-                            e.printStackTrace();
-                        }
-                    }
-                }, new Response.ErrorListener() {
-
-                    @Override
-                    public void onErrorResponse(VolleyError error) {
-                        // TODO: Handle error
-
-                    }
-                });
-
-        mRequestQueue.add(jsonObjectRequest);
-    }
-*/
-
+    
     public void zacniHrat(View view) {
         Intent novaAktivita = new Intent(this, VyberOkruhy.class);
         startActivity(novaAktivita);
